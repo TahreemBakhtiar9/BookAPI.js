@@ -1,0 +1,22 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TahreemBakhtiar9/BookAPI.js.git"
+  },
+  "author": "Tahreem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TahreemBakhtiar9/BookAPI.js/issues"
+  },
+  "homepage": "https://github.com/TahreemBakhtiar9/BookAPI.js#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
