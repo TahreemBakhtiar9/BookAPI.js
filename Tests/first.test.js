@@ -172,28 +172,7 @@ test("Get book by rating", () => {
     const result = getBook();
 
     //assert
-    expect(result).toBe(assert)
+    expect(result).toEqual(assert)
 })
 
-  
-//   test("get book by rating ", () => {
-//        // Arrange
-//     const assert = [
-//       {
-//         Author: "jhon",
-//         ReadingDate: "2039/jan",
-//         length: 253,
-//         rating: 3,
-//         title: "the alpha",
-//         year: 2020,
-//       },
-//     ];
-//     let rating = 3;
-//           //Act
-//     getBooksByRating(rating);
-  
-//     const result = getbook();
-//         // Assert
-//     expect(result).toEqual(assert);
-//   });
   
