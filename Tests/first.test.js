@@ -1,4 +1,4 @@
-const {getBook, addBook, numberRead, addBooks} = require("../ReadingList/Book");
+const {getBook, addBook, numberRead, addBooks, deleteBook} = require("../ReadingList/Book");
 
 // TEST #01:
 test ('Return empty list.', ()=>{
@@ -69,4 +69,14 @@ test('Add multiple Books to the list', ()=>{
 
     //assert
     expect(list).toBe(assert);
+})
+//-----------------------------------------------------------------
+//TEST 04
+test ('Remove book from list', ()=> {
+    //arrange
+    let assert = "the dark";
+    //act
+    deleteBook(list);
+    //assert
+    expect(list).not()
 })

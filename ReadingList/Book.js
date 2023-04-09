@@ -19,3 +19,7 @@ exports.numberRead = () => {
 exports.addBooks = (book, bookInfo) => {
     Booklist.push({...book, bookInfo});
 }
+
+exports.deleteBook = (title) => {
+    Booklist.filter(Booklist => Booklist.Book.title === title);
+}
