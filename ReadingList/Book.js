@@ -28,3 +28,11 @@ exports.deleteBook = (bookTitle) => {
     })
 
 };
+
+exports.getBooksByRating = (rating) => {
+    Booklist.filter(item => {
+        if(item.rating !== rating){
+            return item.isDelete = true;
+        }
+    })
+}

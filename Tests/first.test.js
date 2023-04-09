@@ -1,4 +1,4 @@
-const {getBook, addBook, numberRead, deleteBook} = require("../ReadingList/Book");
+const {getBook, addBook, numberRead, deleteBook, getBooksByRating} = require("../ReadingList/Book");
 
 // TEST #01:
 test ('Return empty list.', ()=>{
@@ -143,56 +143,38 @@ test('Add a new book and return all books from the list', () => {
     //assert
     expect(result).toStrictEqual(assert)
 })
+//------------------------------------------------------------------
+// TEST 06
+test("Get book by rating", () => {
+    //arrange
+    const assert = [
+        {
+            title: "The Hobbit",
+            author: "J. R. R Tolkein ",
+            length: 1058,
+            year: 2012,
+            ReadingDate: "Sept, 2014",
+            rating: 5 
+        },
 
+        {
+            title: "A Dance With Dragons",
+            author: "George R. R. Martin",
+            length: 687,
+            year: 2011,
+            ReadingDate: "April, 2015",
+            rating: 5 
+        }
+    ]
+    let rating = 5;
+    //act
+    getBooksByRating(rating);
+    const result = getBook();
 
+    //assert
+    expect(result).toBe(assert)
+})
 
-
-// test("add the new book and return all list of book", () => {
-//     // Arrange
-//     let assert = [
-//       {
-//         Author: "jhon",
-//         ReadingDate: "2039/jan",
-//         length: 253,
-//         rating: 3,
-//         title: "the alpha",
-//         year: 2020,
-//       },
-//       {
-//         Author: "jhon",
-//         ReadingDate: "2000/jan",
-//         length: 253,
-//         rating: 4,
-//         title: "book",
-//         year: 2020,
-//       },
-//       {
-//         Author: "jhon",
-//         ReadingDate: "2039/jan",
-//         length: 253,
-//         rating: 4,
-//         title: "the beta",
-//         year: 2020,
-//       },
-//     ];
-  
-//     const Book = {
-//       title: "the beta",
-//       Author: "jhon",
-//       length: 253,
-//       year: 2020,
-//     };
-  
-//     const ReadingDate = "2039/jan";
-//     const rating = 4;
-  
-//     addBook(Book, ReadingDate, rating);
-  
-//     //  Arrang
-//     let result = getbook();
-//     // Assert
-//     expect(result).toEqual(assert);
-//   });
   
 //   test("get book by rating ", () => {
 //        // Arrange
