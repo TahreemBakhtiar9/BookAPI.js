@@ -74,9 +74,33 @@ test('Add multiple Books to the list', ()=>{
 //TEST 04
 test ('Remove book from list', ()=> {
     //arrange
-    let assert = "the dark";
+    let assert = [
+        {
+            title: "the dark",
+            author: "john",
+            length: 2909,
+            year: 2022
+        },
+
+        {
+            title: "It ends with us",
+            author: "Colleen Hoover ",
+            length: 389,
+            year: 2017
+        },
+
+        {
+            title: "The Hobbit",
+            author: "J. R. R Tolkein ",
+            length: 1058,
+            year: 2012   
+        }
+    ]
+
+    let title = "the dark";
     //act
-    deleteBook(list);
+    deleteBook(title);
+    let result = getBook();
     //assert
-    expect(list).not()
+    expect(result).toEqual(assert)
 })

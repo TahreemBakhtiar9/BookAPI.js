@@ -20,6 +20,11 @@ exports.addBooks = (book, bookInfo) => {
     Booklist.push({...book, bookInfo});
 }
 
-exports.deleteBook = (title) => {
-    Booklist.filter(Booklist => Booklist.Book.title === title);
+exports.deleteBook = (bookTitle) => {
+    Booklist.map(item => {
+        if(item.title === bookTitle){
+            return item.isDelete = true;
+        }
+    })
+    //Booklist.filter(Booklist => Booklist.Book.title === title);
 }
