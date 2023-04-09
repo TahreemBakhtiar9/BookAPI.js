@@ -1,12 +1,15 @@
-test ('booklist should be empty while starting for the first time.', ()=>{
+const {getBook, addBook, numberRead} = require("../Books/Book")
+
+test ('Return empty list.', ()=>{
 
     //arrange
-    let bookList;
-    let Assert = 0;
+    let Assert = [];
 
     //act
-    bookList = new bookList();
+    list = getBook();
 
     //assert
-    expect(bookList.getBook().length).toBe(Assert)
+    expect(list).toEqual(Assert)
 })
+
+//test ()
