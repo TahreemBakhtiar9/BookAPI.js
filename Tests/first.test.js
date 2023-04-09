@@ -52,7 +52,7 @@ test('Add multiple Books to the list', ()=>{
     const bookInfo = {
         book_1info: {
             ReadingDate: "Dec, 2023",
-            rating: 4.5
+            rating: 3
         },
         book_2info: {
             ReadingDate: "Sept, 2014",
@@ -79,21 +79,28 @@ test ('Remove book from list', ()=> {
             title: "the dark",
             author: "john",
             length: 2909,
-            year: 2022
+            year: 2022,
+            ReadingDate: "July, 2043",
+            rating: 4
+
         },
 
         {
             title: "It ends with us",
             author: "Colleen Hoover ",
             length: 389,
-            year: 2017
+            year: 2017,
+            ReadingDate: "Dec, 2023",
+            rating: 3
         },
 
         {
             title: "The Hobbit",
             author: "J. R. R Tolkein ",
             length: 1058,
-            year: 2012   
+            year: 2012,
+            ReadingDate: "Sept, 2014",
+            rating: 5 
         }
     ]
 

@@ -2,7 +2,11 @@ let Booklist = [];
 
 
 exports.getBook = () => {
-    return Booklist
+    return Booklist.filter(item => {
+        if(item.isDelete !== true){
+            return `${item.title} by ${item.author}, ${item.length} pages, ${item.year} read on ${item.ReadingDate}, ${item.rating} `
+        }
+    })
 }
 
 exports.addBook = (Book, ReadingDate, rating)=>{
