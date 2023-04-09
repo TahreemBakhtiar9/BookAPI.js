@@ -1,4 +1,4 @@
-const {getBook, addBook, numberRead, addBooks, deleteBook} = require("../ReadingList/Book");
+const {getBook, addBook, numberRead, deleteBook} = require("../ReadingList/Book");
 
 // TEST #01:
 test ('Return empty list.', ()=>{
@@ -49,19 +49,8 @@ test('Add multiple Books to the list', ()=>{
         }
     }
 
-    const bookInfo = {
-        book_1info: {
-            ReadingDate: "Dec, 2023",
-            rating: 3
-        },
-        book_2info: {
-            ReadingDate: "Sept, 2014",
-            rating: 5
-        }
-    }
-
-    addBooks(book.book_1, book.book_1info);
-    addBooks(book.book_2, book.book_2info);
+    addBook(book.book_1, "Dec, 2023" , 3);
+    addBook(book.book_2, "Sept, 2014", 5);
     let assert = 3;
 
     //act
@@ -75,15 +64,6 @@ test('Add multiple Books to the list', ()=>{
 test ('Remove book from list', ()=> {
     //arrange
     let assert = [
-        {
-            title: "the dark",
-            author: "john",
-            length: 2909,
-            year: 2022,
-            ReadingDate: "July, 2043",
-            rating: 4
-
-        },
 
         {
             title: "It ends with us",
@@ -109,5 +89,5 @@ test ('Remove book from list', ()=> {
     deleteBook(title);
     let result = getBook();
     //assert
-    expect(result).toEqual(assert)
+    expect(result).toStrictEqual(assert)
 })
