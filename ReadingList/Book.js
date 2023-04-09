@@ -1,5 +1,6 @@
 let Booklist = [];
 
+
 exports.getBook = () => {
     return Booklist
 }
@@ -13,4 +14,8 @@ exports.addBook = (Book, ReadingDate, rating)=>{
 
 exports.numberRead = () => {
     return Booklist.length;
+}
+
+exports.addBooks = (book, bookInfo) => {
+    Booklist.push({...book, bookInfo});
 }
